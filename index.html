@@ -2,33 +2,36 @@
 <html>
 <head>
     <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Gaegu" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Hangman</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css"/>
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
     <script src="assets/javascript/game.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Gaegu" rel="stylesheet">
 </head>
 <body>
-    <div class="wrapper">
-            <h1>Hangman</h1>
-                <h2>Welcome to Hangman</h2>
-                <p>Choose a letter from down below to get started!</p>
-            </div>
-            <div class="wrapper">
-                <div id="buttons">
-                </div>  
-                <p id="catagoryName"></p>
-                <div id="hold">
-                </div>
-                <p id="mylives"></p>
-                <p id="clue">Clue -</p>  
-                <div class="container">
-                <button id="hint">Hint</button>
-                <button id="reset">Play again</button>
-                </div>
-            </div>
-
+        <div class="wrapper">
+                <h1>Welcome to Hangman!</h1>
+                 <p>Choose a letter down below to start the game!</p>
+             </div>
+             <div class="wrapper">
+                 <div id="buttons">
+                 </div>  
+                 <p id="catagoryName"></p>
+                 <div id="hold">
+                 </div>
+                 <p id="mylives"></p>
+                 <p id="clue">Clue -</p>
+                 <canvas id="stickman"></canvas>
+                 <div class="container">
+                   <button id="hint">Hint</button>
+                   <button id="reset">Play again</button>
+                 </div>
+             </div>
+             
 </body>
 </html>
+     
+     
+     
