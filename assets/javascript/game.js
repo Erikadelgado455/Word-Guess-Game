@@ -14,7 +14,7 @@ window.onload = function () {
     var counter ;           // Count correct guesses
     var space;              // Number of spaces in word '-'
   
-    // Get elements
+    // elements
     var showLives = document.getElementById("mylives");
     var showCatagory = document.getElementById("scatagory");
     var getHint = document.getElementById("hint");
