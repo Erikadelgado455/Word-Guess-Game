@@ -1,8 +1,8 @@
 window.onload = function () {
 
-    var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
-          'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
-          't', 'u', 'v', 'w', 'x', 'y', 'z'];
+    var Alphabet = ["A", "B", "C", "D", "E", "F", "G", "H",
+          "I", "J", "J", "L", "M", "N", "O", "p", "Q", "R", "s",
+          "T", "U", "V", "W", "X", "Y", "Z",];
     
     var categories;         // Array of topics
     var chosenCategory;     // Selected catagory
@@ -22,16 +22,16 @@ window.onload = function () {
   
   
   
-    // create alphabet ul
+    // create alphabet 
     var buttons = function () {
-      myButtons = document.getElementById('buttons');
-      letters = document.createElement('ul');
+      myButtons = document.getElementById("buttons");
+      letters = document.createElement("ul");
   
-      for (var i = 0; i < alphabet.length; i++) {
-        letters.id = 'alphabet';
-        list = document.createElement('li');
-        list.id = 'letter';
-        list.innerHTML = alphabet[i];
+      for (var i = 0; i < Alphabet.length; i++) {
+        letters.id = "Alphabet";
+        list = document.createElement("li");
+        list.id = "letter";
+        list.innerHTML = Alphabet[i];
         check();
         myButtons.appendChild(letters);
         letters.appendChild(list);
@@ -52,13 +52,13 @@ window.onload = function () {
   
     // Create guesses ul
      result = function () {
-      wordHolder = document.getElementById('hold');
-      correct = document.createElement('ul');
+      wordHolder = document.getElementById("hold");
+      correct = document.createElement("ul");
   
       for (var i = 0; i < word.length; i++) {
-        correct.setAttribute('id', 'my-word');
-        guess = document.createElement('li');
-        guess.setAttribute('class', 'guess');
+        correct.setAttribute("id", "my-word");
+        guess = document.createElement("li");
+        guess.setAttribute("class", "guess");
         if (word[i] === "-") {
           guess.innerHTML = "-";
           space = 1;
@@ -78,8 +78,8 @@ window.onload = function () {
       if (lives < 1) {
         showLives.innerHTML = "Game Over";
       }
-      for (var i = 0; i < geusses.length; i++) {
-        if (counter + space === geusses.length) {
+      for (var i = 0; i < guesses.length; i++) {
+        if (counter + space === guesses.length) {
           showLives.innerHTML = "You Win!";
         }
       }
@@ -88,8 +88,8 @@ window.onload = function () {
      
     canvas =  function(){
 
-        myStickman = document.getElementById("stickman");
-        context = myStickman.getContext('2d');
+        box = document.getElementById("box");
+        context = box.getContext("2d");
         context.beginPath();
         context.strokeStyle = "#fff";
         context.lineWidth = 2;
@@ -99,20 +99,19 @@ window.onload = function () {
     // OnClick Function
     check = function () {
         list.onclick = function () {
-          var geuss = (this.innerHTML);
+          var guess = (this.innerHTML);
           this.setAttribute("class", "active");
           this.onclick = null;
           for (var i = 0; i < word.length; i++) {
-            if (word[i] === geuss) {
-              geusses[i].innerHTML = geuss;
+            if (word[i] === guess) {
+              guesses[i].innerHTML = guess;
               counter += 1;
             } 
           }
-          var j = (word.indexOf(geuss));
+          var j = (word.indexOf(guess));
           if (j === -1) {
             lives -= 1;
             comments();
-            animate();
           } else {
             comments();
           }
@@ -123,9 +122,9 @@ window.onload = function () {
       // Play
       play = function () {
         categories = [
-          ["jeep", "mazda", "toyota", "honda", "ford", "chevrolet", "hyundai"],
-          ["classical", "jazz", "rock", "rap", "reggae"],
-          ["spiderman", "hulk", "captain america", "ironman", "thor"]
+          ["JEEP", "MAZDA", "TOYOTA", "HONDA", "FORD", "CHEVORLET", "HYUNDAI"],
+          ["CLASSICAL", "JAZZ", "ROCK", "RAP", "REGGAE"],
+          ["SPIDERMAN", "HULK", "CAPTAIN-AMERICA", "IRONMAN", "THOR"]
         ];
     
         chosenCategory = categories[Math.floor(Math.random() * categories.length)];
@@ -134,7 +133,7 @@ window.onload = function () {
         console.log(word);
         buttons();
     
-        geusses = [ ];
+        guesses = [ ];
         lives = 10;
         counter = 0;
         space = 0;
@@ -163,7 +162,7 @@ window.onload = function () {
     
        // Reset
     
-      document.getElementById('reset').onclick = function() {
+      document.getElementById("reset").onclick = function() {
         correct.parentNode.removeChild(correct);
         letters.parentNode.removeChild(letters);
         showClue.innerHTML = "";
