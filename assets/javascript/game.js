@@ -1,7 +1,7 @@
 window.onload = function () {
 
-    var Alphabet = ["A", "B", "C", "D", "E", "F", "G", "H",
-          "I", "J", "J", "L", "M", "N", "O", "p", "Q", "R", "s",
+    var alphabet = ["A", "B", "C", "D", "E", "F", "G", "H",
+          "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S",
           "T", "U", "V", "W", "X", "Y", "Z",];
     
     var categories;         // Array of topics
@@ -27,11 +27,11 @@ window.onload = function () {
       myButtons = document.getElementById("buttons");
       letters = document.createElement("ul");
   
-      for (var i = 0; i < Alphabet.length; i++) {
-        letters.id = "Alphabet";
-        list = document.createElement("li");
-        list.id = "letter";
-        list.innerHTML = Alphabet[i];
+      for (var i = 0; i < alphabet.length; i++) {
+        letters.id = 'alphabet';
+        list = document.createElement('li');
+        list.id = 'letter';
+        list.innerHTML = alphabet[i];
         check();
         myButtons.appendChild(letters);
         letters.appendChild(list);
