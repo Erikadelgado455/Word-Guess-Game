@@ -96,6 +96,82 @@ window.onload = function () {
     };
     
   
+    // OnClick Function
+    check = function () {
+        list.onclick = function () {
+          var geuss = (this.innerHTML);
+          this.setAttribute("class", "active");
+          this.onclick = null;
+          for (var i = 0; i < word.length; i++) {
+            if (word[i] === geuss) {
+              geusses[i].innerHTML = geuss;
+              counter += 1;
+            } 
+          }
+          var j = (word.indexOf(geuss));
+          if (j === -1) {
+            lives -= 1;
+            comments();
+            animate();
+          } else {
+            comments();
+          }
+        }
+      }
+      
+        
+      // Play
+      play = function () {
+        categories = [
+          ["jeep", "mazda", "toyota", "honda", "ford", "chevrolet", "hyundai"],
+          ["classical", "jazz", "rock", "rap", "reggae"],
+          ["spiderman", "hulk", "captain america", "ironman", "thor"]
+        ];
+    
+        chosenCategory = categories[Math.floor(Math.random() * categories.length)];
+        word = chosenCategory[Math.floor(Math.random() * chosenCategory.length)];
+        word = word.replace(/\s/g, "-");
+        console.log(word);
+        buttons();
+    
+        geusses = [ ];
+        lives = 10;
+        counter = 0;
+        space = 0;
+        result();
+        comments();
+        selectCat();
+        canvas();
+      }
+    
+      play();
+      
+      // Hint
+    
+        hint.onclick = function() {
+    
+          hints = [
+              ["Go Anywhere, Do Anything", "Zoom-Zoom", "Let's Go Places", "The Power of Dreams", "Go further", "Chevy Runs Deep", "New Thinking, New Possibilities"],
+              ["Beethoven", "Louis Armstrong", "Jimi Hendrix", "N.W.A", "Bob Marley"],
+              ["Bitten by a radioactive spider", "you wouldn't like me when im angry", "red, white and blue", "i wear a supersuit", "God of Thunder"]
+        ];
+    
+        var catagoryIndex = categories.indexOf(chosenCategory);
+        var hintIndex = chosenCategory.indexOf(word);
+        showClue.innerHTML = "Clue: - " +  hints [catagoryIndex][hintIndex];
+      };
+    
+       // Reset
+    
+      document.getElementById('reset').onclick = function() {
+        correct.parentNode.removeChild(correct);
+        letters.parentNode.removeChild(letters);
+        showClue.innerHTML = "";
+        context.clearRect(0, 0, 400, 400);
+        play();
+      }
+    }
+    
   
   
     
