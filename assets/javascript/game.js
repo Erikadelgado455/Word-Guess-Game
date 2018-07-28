@@ -1,58 +1,37 @@
-var words =['jeep', 'mazda', 'toyota', 'honda', 'ford', 'chevorlet', 'hyundai'];
-var wrongwords=[];
-var rightwords=["_","_","_","_"];
-var userinputkey;
-var randomword=Math.floor(Math.random()*words.length);;
-var currentword=words[randomword];
-var wordsplit=currentword.split('');
-var wrongcount=5;
 
-document.getElementById('correctguesses').textContent=rightwords;
-    document.onkeyup=function()
+    var wordarray =["jeep", "mazda", "toyota", "honda", "ford", "chevorlet", "hyundai"];
+    var randomword=wordarray[Math.floor(Math.random()*wordarray.length)];
+    var randomwordsplit=randomword.split('');
+    
+    var x;
+    var count = 0;
+    var answerarray=[];
+    function startup()
     {
-        console.log("wrongguesses"+wrongcount);
-        userinputkey=event.key;
-    while(wrongcount>0 && rightwords !== wordsplit)
-    {
-    if(currentword.indexOf(userinputkey)>-1)
-    {
-            if(userinputkey === currentword.charAt(0))
-            {
-                rightwords.fill(userinputkey,0,1);
-                console.log("correct"+rightwords)
-                document.getElementById('correctguesses').textContent=rightwords
-            }
-            else if(userinputkey === currentword.charAt(1))
-            {
-                rightwords.fill(userinputkey,1,2);
-                console.log("correct"+rightwords);
-                document.getElementById('correctguesses').textContent=rightwords
-            }
-            else if(userinputkey === currentword.charAt(2))
-            {
-                rightwords.fill(userinputkey,2,3);
-                console.log("correct"+rightwords);
-                document.getElementById('correctguesses').textContent=rightwords
-            }
-            else if(userinputkey === currentword.charAt(3))
-            {
-                rightwords.fill(userinputkey,3,4);
-                console.log("correct"+rightwords);
-                document.getElementById('correctguesses').textContent=rightwords
-            }
+        for(var i=0; i< randomword.length; i++)
+        {
+            answerarray[i]="_ ";
         }
-      else
-      {
-          wrongwords.push(userinputkey);
-          console.log("incorrect"+wrongwords);
-          document.getElementById('wrongguesses').textContent=wrongwords;
-          wrongcount--;
-        }
+        s=answerarray.join(" ");
+        document.getElementById("answer").innerHTML.x;
     }
-    if(wrongcount===0)
+    function Letter() 
     {
-        console.log("game over");
-    }
+        var letter=document.getElementById("letter").value;
+        if(letter.length>0)
+        {
+            for(var i=0; i<randomword.length; i++)
+            {
+                if(randomword[i]===letter)
+                {
+                    answerarray[i]=letter;
+                }
+            }
+            count++;
+            document.getElementById("counter").innerHTML="Times Guessed:"+count;
+            document.getElementById("answer").innerHTML=answerarray.join(" ");
+        }
         
     }
 
+   
