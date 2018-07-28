@@ -7,78 +7,25 @@ body {
   height: 100%;
   text-align: center;
   font-size: 18px;
-}
-.wrappper {
-  width: 100%;
-  margin: 0 auto;
-}
-.wrappper:after {
-  content: "";
-  display: table;
-  clear: both;
-}
 
-h1, h2, h3 {
-  font-weight: 100;
-  text-transform: uppercase;
-  margin: 5px 0;
+}  
+.missing{
+text-align: center;
+font-size: 130px;
+margin: auto;
+height:200px;
+width: 80%
 }
-h1 {
-  font-family: 'Amatic SC', cursive;
-  font-size: 2.6em;
+.correctguesses{
+  height:200px;
+  width: 80%
 }
-h2 {
-  font-size: 1.6em;
-  font-family: 'Gaegu', cursive;
+.wrongguesses{
+  height:200px;
+  width: 80%
 }
-h3 {
-    font-family: 'Gaegu', cursive;
-}
-p {
-  font-size: 1.6em;
-}
-#alphabet {
-  margin: 15px auto;
-  padding: 0;
-  max-width: 900px;
-}
-#alphabet:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-#alphabet li {
-  float: left;
-  margin: 0 10px 10px 0;
-  list-style: none;
-  width: 35px;
-  height: 30px;
-  padding-top: 10px;
-  background: cornflowerblue;
-  color:black;
-  cursor: pointer;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  -khtml-border-radius: 5px;
-  border: solid 1px #fff;
-}
-#alphabet li:hover {
-  background: khaki;
-  border: solid 1px #fff;
-  color: #fff;
-}
-#my-word {
-  margin: 0;
-  display: block;
-  padding: 0;
-  display: block;
-}
-#my-word li {
-  position: relative;
-  list-style: none;
-  margin: 0;
-  display: inline-block;
-  padding: 0 10px;
-  font-size: 1.6em;
+header{
+  border: 3px solid black;
+  font-size: 20px;
+  
 }
