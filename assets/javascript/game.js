@@ -28,7 +28,7 @@
                 }
             }
             count++;
-            document.getElementById("counter").innerHTML="Times Guessed:"+count;
+            document.getElementById("timesguessed").innerHTML="Times Guessed:"+count;
             document.getElementById("answer").innerHTML=answerarray.join(" ");
         }
         
