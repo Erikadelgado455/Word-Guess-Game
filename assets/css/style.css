@@ -3,42 +3,19 @@ body {
   background-repeat:no-repeat;
   background-size: cover;
   font-family: 'Gaegu', cursive;
-  color: #fff;
   height: 100%;
   text-align: center;
   font-size: 18px;
-
+  border: 3px solid black;
+  font-size: 75px;
+  text-align: center;
+  margin: 25px auto;
+  height: 385px;
+  width: 80%
 }  
-.missing{
-  border: 3px solid black;
-  font-size: 100px;
-  text-align: center;
-  margin: 25px auto;
-  height: 200px;
-  width: 80%
-}
-.correctguesses{
-  border: 3px solid black;
-  font-size: 75px;
-  text-align: center;
-  margin: 25px auto;
-  height: 200px;
-  width: 80%
-}
-.wrongguesses{
-  border: 3px solid black;
-  font-size: 75px;
-  text-align: center;
-  margin: 25px auto;
-  height: 200px;
-  width: 80%
-}
-header{
-  border: 3px solid black;
-  font-size: 75px;
-  text-align: center;
-  margin: 25px auto;
-  height: 200px;
-  width: 80%
-
+#letterbutton{
+  background-color: darkcyan;
+  border-radius: 50%;
+  border-color: darkcyan;
+  font-family: 'Gaegu', cursive;
 }
