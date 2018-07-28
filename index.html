@@ -11,17 +11,13 @@
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
     <script src="assets/javascript/game.js"></script>
 </head>
-<body>
+
+<body onload="startup()">
+    <h1>Choose a letter!</h1>
+    <input id="letter" type=text>
+    <input id="letterbutton" type="button" value="letter" onclick="Letter()"/>
+    <p id="answer"></p>
+    <p id="counter"></p>
+    <p id="stat"></p>
 </body>
-<div class="container">
-    <header>
-        <h1>Hangman</h1>
-    </header>
-    <div class="missing">_ _ _ _</div>
-    <div class="correctguesses">correct</div>
-    <div class="wrongguesses">incorrect</div>
-</div>
 </html>
-     
-     
-     
