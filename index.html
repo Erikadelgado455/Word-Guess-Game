@@ -12,11 +12,12 @@
     <script src="assets/javascript/game.js"></script>
 </head>
 
-<body onload="start()">
+<body onload="game()">
     <h1>Choose a letter!</h1>
-    <input id="letter" type=text>
-    <input id="letterbutton" type="button" value="letter" onclick="Letter()"/>
+    <input id="letterguessed" type=text>
+    <input id="letterbutton" type="button" value="letter" onclick="Letterguessed()"/>
     <p id="answer"></p>
     <p id="timesguessed"></p>
+    <p id="chosen"></p>
 </body>
 </html>
