@@ -10,12 +10,27 @@ body {
   font-size: 75px;
   text-align: center;
   margin: 25px auto;
-  height: 385px;
+  height: 485px;
   width: 80%
 }  
 #letterbutton{
   background-color: darkcyan;
   border-radius: 50%;
-  border-color: darkcyan;
+  border:none;
   font-family: 'Gaegu', cursive;
+  font-size: 25px
+}
+#chosen{
+  font-size: 30px;
+  padding:45px;
+  color: yellow;
+}
+#letterguessed{
+  background-color: lightskyblue;
+  border:none; 
+  font-family: 'Gaegu', cursive;
+  padding:45px;
+  font-size: 50px;
+  text-align: center;
+
 }
